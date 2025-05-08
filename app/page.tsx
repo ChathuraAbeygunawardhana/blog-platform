@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma';
+import Link from 'next/link';
 
 export default async function Home() {
   const users = await prisma.user.findMany();
@@ -14,6 +15,12 @@ export default async function Home() {
           </li>
         ))}
       </ol>
+      <Link
+        href={`/posts`}
+        className="font-semibold text-black border border-gray-500 rounded-md p-4"
+      >
+        View posts
+      </Link>
     </div>
   );
 }

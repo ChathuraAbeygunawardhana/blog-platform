@@ -31,6 +31,13 @@ export default async function Posts() {
           </li>
         ))}
       </ul>
+      <div className=" w-full justify-end flex ">
+        <Link href={'/posts/new'}>
+          <div className="border border-gray-500 rounded-md text-black mt-10 w-40 justify-center items-center align-center  flex">
+            create new post
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
